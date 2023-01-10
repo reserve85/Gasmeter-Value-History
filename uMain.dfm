@@ -10,10 +10,8 @@ object Gasmeter: TGasmeter
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object lblImpressum: TLabel
     Left = 316
@@ -89,10 +87,42 @@ object Gasmeter: TGasmeter
       'redtLog')
     ParentFont = False
     TabOrder = 5
-    Zoom = 100
+  end
+  object btnShowGraph: TButton
+    Left = 323
+    Top = 174
+    Width = 114
+    Height = 25
+    Caption = 'Show Graph'
+    Enabled = False
+    TabOrder = 6
+    OnClick = btnShowGraphClick
+  end
+  object lbledtCalorificValue: TLabeledEdit
+    Left = 323
+    Top = 84
+    Width = 114
+    Height = 21
+    EditLabel.Width = 71
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Calorific Value:'
+    TabOrder = 7
+    Text = '30'
+    OnChange = lbledtCalorificValueChange
+  end
+  object lbledtZValue: TLabeledEdit
+    Left = 323
+    Top = 131
+    Width = 114
+    Height = 21
+    EditLabel.Width = 39
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Z Value:'
+    TabOrder = 8
+    Text = '30'
+    OnChange = lbledtZValueChange
   end
   object idhtp1: TIdHTTP
-    AllowCookies = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
     Request.ContentLength = -1
